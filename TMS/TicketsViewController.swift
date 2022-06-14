@@ -5,8 +5,6 @@ import UIKit
 class TicketsViewController: UIViewController {
 
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        
