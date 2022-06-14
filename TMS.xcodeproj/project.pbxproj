@@ -13,6 +13,10 @@
 		1143C07F2857A31600C9587D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1143C07D2857A31600C9587D /* Main.storyboard */; };
 		1143C0812857A31B00C9587D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1143C0802857A31B00C9587D /* Assets.xcassets */; };
 		1143C0842857A31B00C9587D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1143C0822857A31B00C9587D /* LaunchScreen.storyboard */; };
+		1143C08C285884C400C9587D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08B285884C400C9587D /* SearchViewController.swift */; };
+		1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08D2858852D00C9587D /* TicketsViewController.swift */; };
+		1143C0902858858100C9587D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08F2858858100C9587D /* HelpViewController.swift */; };
+		1143C0922858D55E00C9587D /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0912858D55D00C9587D /* HeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1143C0802857A31B00C9587D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1143C0832857A31B00C9587D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1143C0852857A31B00C9587D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1143C08B285884C400C9587D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1143C08D2858852D00C9587D /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		1143C08F2858858100C9587D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		1143C0912858D55D00C9587D /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				1143C0772857A31600C9587D /* AppDelegate.swift */,
 				1143C0792857A31600C9587D /* SceneDelegate.swift */,
 				1143C07B2857A31600C9587D /* ViewController.swift */,
+				1143C08B285884C400C9587D /* SearchViewController.swift */,
+				1143C08D2858852D00C9587D /* TicketsViewController.swift */,
+				1143C08F2858858100C9587D /* HelpViewController.swift */,
 				1143C07D2857A31600C9587D /* Main.storyboard */,
 				1143C0802857A31B00C9587D /* Assets.xcassets */,
 				1143C0822857A31B00C9587D /* LaunchScreen.storyboard */,
 				1143C0852857A31B00C9587D /* Info.plist */,
+				1143C0912858D55D00C9587D /* HeaderCollectionReusableView.swift */,
 			);
 			path = TMS;
 			sourceTree = "<group>";
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1143C0922858D55E00C9587D /* HeaderCollectionReusableView.swift in Sources */,
 				1143C07C2857A31600C9587D /* ViewController.swift in Sources */,
+				1143C0902858858100C9587D /* HelpViewController.swift in Sources */,
+				1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */,
 				1143C0782857A31600C9587D /* AppDelegate.swift in Sources */,
+				1143C08C285884C400C9587D /* SearchViewController.swift in Sources */,
 				1143C07A2857A31600C9587D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
