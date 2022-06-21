@@ -19,6 +19,7 @@ class TicketsViewController: UIViewController {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .systemGreen
         appearance.largeTitleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
+        appearance.titleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance;
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
         

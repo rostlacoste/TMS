@@ -65,7 +65,8 @@
         <!--Help View Controller-->
         <scene sceneID="kU8-0b-9na">
             <objects>
-                <viewController id="ayJ-dT-1fi" customClass="HelpViewController" customModule="TMS" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sV-2i-BDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HelpViewController" id="ayJ-dT-1fi" customClass="HelpViewController" customModule="TMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tgC-sb-8O2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,13 +75,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="c5l-F2-3MI"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9sV-2i-BDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="1288"/>
+            <point key="canvasLocation" x="2092.753623188406" y="1287.7232142857142"/>
         </scene>
         <!--Поиск-->
         <scene sceneID="pRw-0k-oRt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hc8-pj-QG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pQD-TR-uyM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Поиск" id="G6g-ZR-JeA">
                         <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
@@ -90,10 +91,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Opf-8B-mNA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -103,7 +100,6 @@
                         <segue destination="0rt-hB-dsV" kind="relationship" relationship="rootViewController" id="xj1-zr-xGE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hc8-pj-QG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1455.072463768116" y="519.64285714285711"/>
         </scene>
@@ -131,6 +127,7 @@
         <!--Помощь-->
         <scene sceneID="kz5-E2-eVa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJs-mN-Zye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VTe-2P-JHy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Помощь" id="FoI-t1-JdD">
                         <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
@@ -145,7 +142,6 @@
                         <segue destination="ayJ-dT-1fi" kind="relationship" relationship="rootViewController" id="gTN-If-Xxe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eJs-mN-Zye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2092.753623188406" y="519.64285714285711"/>
         </scene>
@@ -159,9 +155,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
