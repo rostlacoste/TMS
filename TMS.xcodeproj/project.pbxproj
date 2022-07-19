@@ -16,7 +16,12 @@
 		1143C08C285884C400C9587D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08B285884C400C9587D /* SearchViewController.swift */; };
 		1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08D2858852D00C9587D /* TicketsViewController.swift */; };
 		1143C0B4285CE6C200C9587D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0B3285CE6C100C9587D /* SettingsViewController.swift */; };
-		1143C0D12861CFD700C9587D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0D02861CFD700C9587D /* HelpViewController.swift */; };
+		1151D32F287ED45A008B89DD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151D32E287ED45A008B89DD /* HelpViewController.swift */; };
+		11BD7442288476BD00FC40FC /* FromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD7441288476BD00FC40FC /* FromViewController.swift */; };
+		11BD744428847DA300FC40FC /* ToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD744328847DA300FC40FC /* ToViewController.swift */; };
+		11F52D142885D2D100425DE1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F52D132885D2D100425DE1 /* ResultsViewController.swift */; };
+		11F52D162885D94500425DE1 /* GooglePlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F52D152885D94500425DE1 /* GooglePlaceManager.swift */; };
+		260F9AB55CB605F91D322614 /* libPods-TMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF59869004B09432DD5FDB88 /* libPods-TMS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +36,14 @@
 		1143C08B285884C400C9587D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1143C08D2858852D00C9587D /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		1143C0B3285CE6C100C9587D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1143C0D02861CFD700C9587D /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../../../../Downloads/HelpViewController.swift; sourceTree = "<group>"; };
+		1151D32E287ED45A008B89DD /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		11BD7441288476BD00FC40FC /* FromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromViewController.swift; sourceTree = "<group>"; };
+		11BD744328847DA300FC40FC /* ToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToViewController.swift; sourceTree = "<group>"; };
+		11F52D132885D2D100425DE1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		11F52D152885D94500425DE1 /* GooglePlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceManager.swift; sourceTree = "<group>"; };
+		207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.debug.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.debug.xcconfig"; sourceTree = "<group>"; };
+		B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.release.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.release.xcconfig"; sourceTree = "<group>"; };
+		FF59869004B09432DD5FDB88 /* libPods-TMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260F9AB55CB605F91D322614 /* libPods-TMS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D98342369DE6417775D2DAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */,
+				B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1143C06B2857A31600C9587D = {
 			isa = PBXGroup;
 			children = (
 				1143C0762857A31600C9587D /* TMS */,
 				1143C0752857A31600C9587D /* Products */,
+				0D98342369DE6417775D2DAC /* Pods */,
+				272AC469740343CA02182182 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,19 +88,55 @@
 		1143C0762857A31600C9587D /* TMS */ = {
 			isa = PBXGroup;
 			children = (
+				11BD743E28846E9800FC40FC /* SearchTab */,
+				11BD743F28846EB100FC40FC /* TicketsTab */,
+				11BD744028846EC100FC40FC /* HelpTab */,
 				1143C0772857A31600C9587D /* AppDelegate.swift */,
 				1143C0792857A31600C9587D /* SceneDelegate.swift */,
 				1143C07B2857A31600C9587D /* ViewController.swift */,
-				1143C08B285884C400C9587D /* SearchViewController.swift */,
-				1143C08D2858852D00C9587D /* TicketsViewController.swift */,
-				1143C0D02861CFD700C9587D /* HelpViewController.swift */,
-				1143C0B3285CE6C100C9587D /* SettingsViewController.swift */,
 				1143C07D2857A31600C9587D /* Main.storyboard */,
 				1143C0802857A31B00C9587D /* Assets.xcassets */,
 				1143C0822857A31B00C9587D /* LaunchScreen.storyboard */,
 				1143C0852857A31B00C9587D /* Info.plist */,
 			);
 			path = TMS;
+			sourceTree = "<group>";
+		};
+		11BD743E28846E9800FC40FC /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				1143C08B285884C400C9587D /* SearchViewController.swift */,
+				11BD7441288476BD00FC40FC /* FromViewController.swift */,
+				11BD744328847DA300FC40FC /* ToViewController.swift */,
+				11F52D132885D2D100425DE1 /* ResultsViewController.swift */,
+				11F52D152885D94500425DE1 /* GooglePlaceManager.swift */,
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		11BD743F28846EB100FC40FC /* TicketsTab */ = {
+			isa = PBXGroup;
+			children = (
+				1143C08D2858852D00C9587D /* TicketsViewController.swift */,
+			);
+			path = TicketsTab;
+			sourceTree = "<group>";
+		};
+		11BD744028846EC100FC40FC /* HelpTab */ = {
+			isa = PBXGroup;
+			children = (
+				1151D32E287ED45A008B89DD /* HelpViewController.swift */,
+				1143C0B3285CE6C100C9587D /* SettingsViewController.swift */,
+			);
+			path = HelpTab;
+			sourceTree = "<group>";
+		};
+		272AC469740343CA02182182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF59869004B09432DD5FDB88 /* libPods-TMS.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1143C0882857A31B00C9587D /* Build configuration list for PBXNativeTarget "TMS" */;
 			buildPhases = (
+				0B4AAF69100D529F0E6E7C12 /* [CP] Check Pods Manifest.lock */,
 				1143C0702857A31600C9587D /* Sources */,
 				1143C0712857A31600C9587D /* Frameworks */,
 				1143C0722857A31600C9587D /* Resources */,
+				B39C9B528438CEC8950801EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,17 +207,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B4AAF69100D529F0E6E7C12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B39C9B528438CEC8950801EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMS/Pods-TMS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMS/Pods-TMS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TMS/Pods-TMS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1143C0702857A31600C9587D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1143C07C2857A31600C9587D /* ViewController.swift in Sources */,
+				11F52D162885D94500425DE1 /* GooglePlaceManager.swift in Sources */,
 				1143C0B4285CE6C200C9587D /* SettingsViewController.swift in Sources */,
-				1143C0D12861CFD700C9587D /* HelpViewController.swift in Sources */,
+				1151D32F287ED45A008B89DD /* HelpViewController.swift in Sources */,
+				11F52D142885D2D100425DE1 /* ResultsViewController.swift in Sources */,
 				1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */,
+				11BD744428847DA300FC40FC /* ToViewController.swift in Sources */,
 				1143C0782857A31600C9587D /* AppDelegate.swift in Sources */,
 				1143C08C285884C400C9587D /* SearchViewController.swift in Sources */,
+				11BD7442288476BD00FC40FC /* FromViewController.swift in Sources */,
 				1143C07A2857A31600C9587D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +406,7 @@
 		};
 		1143C0892857A31B00C9587D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +435,7 @@
 		};
 		1143C08A2857A31B00C9587D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

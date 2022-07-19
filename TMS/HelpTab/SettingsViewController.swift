@@ -10,15 +10,17 @@ class SettingsViewController: UIViewController {
     //MARK: - Variables
     
     private var cellsData: [SettingsTableCell] = [
-        .init(title: "Валюта", switcher: false),
-        .init(title: "Встроенные сообщения", switcher: true),
-        .init(title: "Настройки конфиденциальности", switcher: false),
+        .init(title: "Валюта", currencySwitch: nil),
+        .init(title: "Встроенные сообщения", currencySwitch: nil),
+        .init(title: "Настройки конфиденциальности", currencySwitch: nil),
     ]
     
     //MARK: - Subviews
     
     let settingsTableView = UITableView.init(frame: CGRect.zero, style: .plain)
     
+    
+     
     
    
     //MARK: - Life circle
@@ -30,6 +32,17 @@ class SettingsViewController: UIViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        func hideTabBar() {
+            var frame = self.tabBarController?.tabBar.frame
+            frame!.origin.y = self.view.frame.size.height + (frame?.size.height)!
+            UIView.animate(withDuration: 0.5, animations: {
+                self.tabBarController?.tabBar.frame = frame!
+            })
+        }
+        hideTabBar()
+        
+        
     }
     
     
@@ -72,6 +85,8 @@ class SettingsViewController: UIViewController {
         settingsTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
     }
     
+   
+    
     
     
 
@@ -89,14 +104,26 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = settingsTableView.dequeueReusableCell(withIdentifier: "DefaultCell")!
         cell.textLabel?.text = self.cellsData[indexPath.row].title
     
-       
+        
+       let messagesSwitch = UISwitch()
+        messagesSwitch.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
+        messagesSwitch.isOn = true
+        cell.accessoryView = messagesSwitch
+        
         
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = .systemGray6
         return cell
     }
     
-    
+    @objc func didChangeSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            print("получать встроенные сообщения")
+        }
+        else {
+            print("не получать встроенные сообщения")
+        }
+    }
     
 }
 
@@ -111,6 +138,6 @@ private class TableViewCell: UITableViewCell {
 
 struct SettingsTableCell {
     var title: String
-    var switcher: Bool
+    var currencySwitch: UISwitch?
     
 }
