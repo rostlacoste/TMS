@@ -56,8 +56,6 @@ class TicketsViewController: UIViewController {
         let ticketsImage = UIImage(named: "notickets")
         noTicketsImageView.image = ticketsImage
         noTicketsImageView.contentMode = UIView.ContentMode.scaleAspectFit
-        
-        
         noTicketsImageView.translatesAutoresizingMaskIntoConstraints = false
         
         

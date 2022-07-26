@@ -2,45 +2,38 @@
 
 import UIKit
 
-let searchViewController: SearchViewController = SearchViewController()
 
-class SearchViewController: UIViewController {
+
+class HelpViewController: UIViewController {
     
     //MARK: - Variables
-    
-    private var cellsData: [SearchTableCell] = [
-        .init(title: "Откуда", image: nil),
-        .init(title: "Куда", image: nil),
-        .init(title: "Дата туда", image: nil),
-        .init(title: "Дата обратно", image: nil),
-        .init(title: "Пассажиры", image: nil),
-        .init(title: "Найти билеты", image: nil),
-        .init(title: "Безопасные поездки с FlixBus", image: UIImage.init(systemName: "exclamationmark.circle.fill"), url: URL.init(string: "https://flixbus.ru"))
+    private var cellsData: [HelpTableCell] = [
+        .init(title: "Нужна помощь?", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Общие положения и условия", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Политика конфиденциальности", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Остановки", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Контактные и регистрационные данные", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Настройки", image: UIImage.init(systemName: "gearshape.fill")),
+        .init(title: "Отправьте нам отзыв!", image: UIImage.init(systemName: "exclamationmark.bubble.fill"), url: URL.init(string: "https://flixbus.ru"))
     ]
     
     let appearance = UINavigationBarAppearance()
     
-    let dataTextField: UITextField = {
-            let textField = UITextField()
-            textField.translatesAutoresizingMaskIntoConstraints = false
-            textField.font = UIFont.systemFont(ofSize: 20)
-            return textField
-        }()
-    
-    
     
     //MARK: - Subviews
-    let searchTableView = UITableView.init(frame: CGRect.zero, style: .plain)
+    let helpTableView = UITableView.init(frame: CGRect.zero, style: .plain)
     
     
     
+        
+
+     
     
     //MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setup()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,8 +47,6 @@ class SearchViewController: UIViewController {
         }
         showTabBar()
         
-        
-        
     }
     
     //MARK: - Setup
@@ -68,7 +59,7 @@ class SearchViewController: UIViewController {
     
     func buildHierarchy() {
         
-        view.addSubview(self.searchTableView)
+        view.addSubview(self.helpTableView)
         
     }
     
@@ -76,18 +67,16 @@ class SearchViewController: UIViewController {
     
     func configureSubviews() {
         
+        helpTableView.register(TableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        helpTableView.dataSource = self
+        helpTableView.delegate = self
         
-        
-        searchTableView.register(TableViewCell.self, forCellReuseIdentifier: "DefaultCell")
-        searchTableView.dataSource = self
-        searchTableView.delegate = self
-        
-        searchTableView.backgroundColor = .systemGray6
+        helpTableView.backgroundColor = .systemGray6
         view.backgroundColor = .systemGray6
         
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Найти билеты"
+        navigationItem.title = "Помощь"
         
         
         
@@ -105,11 +94,11 @@ class SearchViewController: UIViewController {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        searchTableView.translatesAutoresizingMaskIntoConstraints = false
-        searchTableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        searchTableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
-        searchTableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
-        searchTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
+        helpTableView.translatesAutoresizingMaskIntoConstraints = false
+        helpTableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+        helpTableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        helpTableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+        helpTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
     }
     
     func openUrl(url: URL) {
@@ -120,8 +109,8 @@ class SearchViewController: UIViewController {
 }
 
 //MARK: - extension
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
-   
+extension HelpViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.cellsData.count
@@ -129,7 +118,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = searchTableView.dequeueReusableCell(withIdentifier: "DefaultCell")!
+        let cell = helpTableView.dequeueReusableCell(withIdentifier: "DefaultCell")!
         cell.textLabel?.text = self.cellsData[indexPath.row].title
         
         if cellsData[indexPath.row].image != nil {
@@ -150,8 +139,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
                 switch indexPath.row {
-                case 0: self.navigationController?.pushViewController(fromViewController, animated: true)
-                case 1: self.navigationController?.pushViewController(toViewController, animated: true)
+                case 5: self.navigationController?.pushViewController(settingsViewController, animated: true)
                 default:
                     return
                 }
@@ -177,15 +165,8 @@ private class TableViewCell: UITableViewCell {
 }
 
 
-struct SearchTableCell {
+struct HelpTableCell {
     var title: String
     var image: UIImage?
     var url: URL?
-    
 }
-
-        
-
-        
-        
-
