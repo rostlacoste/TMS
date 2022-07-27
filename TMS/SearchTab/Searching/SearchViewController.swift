@@ -127,8 +127,9 @@ class SearchViewController: UIViewController {
         
         
         configureSearchButton()
-        configureGesturesOnTextField()
         
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         
         
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -141,8 +142,7 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance;
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
         
-        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tap)
+        
        
         
     }
