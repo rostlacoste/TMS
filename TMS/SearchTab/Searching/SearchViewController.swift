@@ -2,13 +2,45 @@
 
 import UIKit
 
-let searchViewController: SearchViewController = SearchViewController()
 
-class SearchViewController: UIViewController {
+
+final class SearchViewController: UIViewController {
     
-    //MARK: - Variables /
+    //MARK: - Variables and Functions/
     
     
+    private func configureSearchButton() {
+        searchButton.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
+    }
+    
+    private func configureGesturesOnTextField() {
+        let tapGestureOnTextField = UITapGestureRecognizer(target: self, action: #selector(textFieldDidTap))
+        cityToView.addGestureRecognizer(tapGestureOnTextField)
+        cityFromView.addGestureRecognizer(tapGestureOnTextField)
+    }
+    
+    @objc private func textFieldDidTap(_ gesture: UITapGestureRecognizer ) {
+        self.navigationController?.pushViewController(fromViewController, animated: true)
+    }
+    
+    
+    @objc func searchButtonAction(_ sender: UIButton!) {
+        print("тест: НАЙТИ БИЛЕТЫ")
+
+    }
+    
+    func showTabBar() {
+        var frame = self.tabBarController?.tabBar.frame
+        frame!.origin.y = self.view.frame.size.height - (frame?.size.height)!
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tabBarController?.tabBar.frame = frame!
+        })
+    }
+    
+    let appearance = UINavigationBarAppearance()
+    
+    
+    //MARK: - Subviews
     
     let cityFromView = UIView()
     let cityToView = UIView()
@@ -25,42 +57,6 @@ class SearchViewController: UIViewController {
     let numberOfPassengersTextField = TitledTextFieldView(title: "Пассажиры")
     
     
-    
-    func configureSearchButton() {
-        searchButton.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
-    }
-    
-    private func configureGesturesOnTextField() {
-        let tapGestureOnTextField = UITapGestureRecognizer(target: self, action: #selector(textFieldDidTap))
-        cityToView.addGestureRecognizer(tapGestureOnTextField)
-        cityFromView.addGestureRecognizer(tapGestureOnTextField)
-    }
-    @objc private func textFieldDidTap(_ gesture: UITapGestureRecognizer ) {
-        self.navigationController?.pushViewController(fromViewController, animated: true)
-    }
-    
-    
-    
-    @objc func searchButtonAction(_ sender: UIButton!) {
-        print("тест: НАЙТИ БИЛЕТЫ")
-//        self.navigationController?.pushViewController(fromViewController, animated: true)
-    }
-    
-    
-    
-    
-    
-    
-    
-    let appearance = UINavigationBarAppearance()
-    
-    
-    //MARK: - Subviews
-    
-    
-    
-    
-    
     //MARK: - Life circle
     
     override func viewDidLoad() {
@@ -68,21 +64,11 @@ class SearchViewController: UIViewController {
         
         setup()
         
-        
-        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        func showTabBar() {
-            var frame = self.tabBarController?.tabBar.frame
-            frame!.origin.y = self.view.frame.size.height - (frame?.size.height)!
-            UIView.animate(withDuration: 0.5, animations: {
-                self.tabBarController?.tabBar.frame = frame!
-            })
-        }
         
         showTabBar()
         
@@ -183,9 +169,6 @@ class SearchViewController: UIViewController {
            
             
             
-          
-            
-            
         }
         
         func setupCityToView() {
@@ -248,7 +231,6 @@ class SearchViewController: UIViewController {
         
         func setupNumberOfPassengersView() {
             numberOfPassengersView.translatesAutoresizingMaskIntoConstraints = false
-//            numberOfPassengersView.backgroundColor = .systemGray4
             numberOfPassengersView.layer.cornerRadius = 4
             numberOfPassengersView.layer.borderWidth = 0.8
             numberOfPassengersView.layer.borderColor = UIColor.systemGray.cgColor
