@@ -8,6 +8,8 @@
 import UIKit
 import CoreLocation
 
+
+
 protocol ResultsViewControllerDelegate: AnyObject {
     func didTapPlace(with coordinates: CLLocationCoordinate2D)
 }
@@ -25,7 +27,12 @@ class ResultsViewController: UIViewController, UITableViewDelegate,UITableViewDa
     
     private var places: [Place] = []
     
+    
+    
+    
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
@@ -72,13 +79,20 @@ class ResultsViewController: UIViewController, UITableViewDelegate,UITableViewDa
         
         
         
+        
         GooglePlacesManager.shared.resolveLocation(for: place) { [weak self]
             result in
             switch result {
             case .success(let coordinate):
                 DispatchQueue.main.async {
                     self?.delegate?.didTapPlace(with: coordinate)
+                    
+
+                    
+                    print("test: \(place.name)")
+                    
                 }
+                
             case .failure(let error):
                 print(error)
             }

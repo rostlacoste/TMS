@@ -4,17 +4,17 @@ import UIKit
 
 
 
-class HelpViewController: UIViewController {
+final class HelpViewController: UIViewController {
     
     //MARK: - Variables
     private var cellsData: [HelpTableCell] = [
-        .init(title: "Нужна помощь?", image: nil, url: URL.init(string: "https://flixbus.ru")),
-        .init(title: "Общие положения и условия", image: nil, url: URL.init(string: "https://flixbus.ru")),
-        .init(title: "Политика конфиденциальности", image: nil, url: URL.init(string: "https://flixbus.ru")),
-        .init(title: "Остановки", image: nil, url: URL.init(string: "https://flixbus.ru")),
-        .init(title: "Контактные и регистрационные данные", image: nil, url: URL.init(string: "https://flixbus.ru")),
+        .init(title: "Нужна помощь?", image: nil, url: URL.init(string: "https://www.aviasales.ru/faq")),
+        .init(title: "Общие положения и условия", image: nil, url: URL.init(string: "https://www.aviasales.ru/about")),
+        .init(title: "Политика конфиденциальности", image: nil, url: URL.init(string: "https://www.aviasales.ru/privacy")),
+    
+        
         .init(title: "Настройки", image: UIImage.init(systemName: "gearshape.fill")),
-        .init(title: "Отправьте нам отзыв!", image: UIImage.init(systemName: "exclamationmark.bubble.fill"), url: URL.init(string: "https://flixbus.ru"))
+        
     ]
     
     let appearance = UINavigationBarAppearance()
@@ -43,6 +43,7 @@ class HelpViewController: UIViewController {
             frame!.origin.y = self.view.frame.size.height - (frame?.size.height)!
             UIView.animate(withDuration: 0.5, animations: {
                 self.tabBarController?.tabBar.frame = frame!
+                self.tabBarController?.tabBar.backgroundColor = .systemGray6
             })
         }
         showTabBar()
@@ -82,7 +83,7 @@ class HelpViewController: UIViewController {
         
         
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemGreen
+        appearance.backgroundColor = .systemBlue
         appearance.largeTitleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         appearance.titleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance;
@@ -139,7 +140,7 @@ extension HelpViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
                 switch indexPath.row {
-                case 5: self.navigationController?.pushViewController(settingsViewController, animated: true)
+                case 3: self.navigationController?.pushViewController(settingsViewController, animated: true)
                 default:
                     return
                 }

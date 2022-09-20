@@ -3,10 +3,10 @@ import UIKit
 import GooglePlaces
 import MapKit
 
-let fromViewController: FromViewController = FromViewController()
+let toViewController: ToViewController = ToViewController()
 
 
-class FromViewController: UIViewController, UISearchResultsUpdating {
+final class ToViewController: UIViewController, UISearchResultsUpdating {
     
     
     
@@ -33,7 +33,7 @@ class FromViewController: UIViewController, UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(mapView)
+//        view.addSubview(mapView)
         
         
         
@@ -95,12 +95,12 @@ class FromViewController: UIViewController, UISearchResultsUpdating {
         
         view.backgroundColor = .systemGray6
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Откуда"
+        navigationItem.title = "Куда"
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemGreen
+        appearance.backgroundColor = .systemBlue
         appearance.largeTitleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         appearance.titleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance;
@@ -111,14 +111,14 @@ class FromViewController: UIViewController, UISearchResultsUpdating {
         searchVC.searchBar.searchBarStyle = .default
         searchVC.searchBar.tintColor = .white
         searchVC.searchBar.barTintColor = .white
-        searchVC.searchBar.backgroundColor = .systemGreen
-        searchVC.searchBar.placeholder = "Откуда"
+        searchVC.searchBar.backgroundColor = .systemBlue
+        searchVC.searchBar.placeholder = "Куда"
         searchVC.hidesNavigationBarDuringPresentation = false
         
         
         if let textfield = searchVC.searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = .white
-            textfield.tintColor = .systemGreen
+            textfield.tintColor = .systemBlue
         }
         
         
@@ -169,7 +169,7 @@ class FromViewController: UIViewController, UISearchResultsUpdating {
 //MARK: - extension
 
 
-extension FromViewController: ResultsViewControllerDelegate {
+extension ToViewController: ResultsViewControllerDelegate {
     
     
     func didTapPlace(with coordinates: CLLocationCoordinate2D) {
@@ -191,6 +191,7 @@ extension FromViewController: ResultsViewControllerDelegate {
     }
     
 }
+
 
 
 

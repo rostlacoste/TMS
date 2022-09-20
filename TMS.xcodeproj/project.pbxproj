@@ -7,25 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110B687728D8AF5200591BFF /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B687628D8AF5200591BFF /* TicketModel.swift */; };
+		110B687928D8DB0A00591BFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B687828D8DB0A00591BFF /* DetailViewController.swift */; };
+		110B687E28D8DF0300591BFF /* CustomPassangersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B687D28D8DF0300591BFF /* CustomPassangersView.swift */; };
+		110B688028D8EF7900591BFF /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B687F28D8EF7900591BFF /* BookingViewController.swift */; };
+		110B688A28D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 110B688828D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodeld */; };
+		110B688C28D9C99A00591BFF /* AppDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B688B28D9C99A00591BFF /* AppDataController.swift */; };
+		110B688E28D9CE3D00591BFF /* FlightsDataBaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B688D28D9CE3D00591BFF /* FlightsDataBaseStorage.swift */; };
+		110B689028DA03F500591BFF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110B688F28DA03F500591BFF /* WebViewController.swift */; };
 		1143C0782857A31600C9587D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0772857A31600C9587D /* AppDelegate.swift */; };
 		1143C07A2857A31600C9587D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0792857A31600C9587D /* SceneDelegate.swift */; };
 		1143C07C2857A31600C9587D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C07B2857A31600C9587D /* ViewController.swift */; };
 		1143C07F2857A31600C9587D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1143C07D2857A31600C9587D /* Main.storyboard */; };
 		1143C0812857A31B00C9587D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1143C0802857A31B00C9587D /* Assets.xcassets */; };
 		1143C0842857A31B00C9587D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1143C0822857A31B00C9587D /* LaunchScreen.storyboard */; };
-		1143C08C285884C400C9587D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08B285884C400C9587D /* SearchViewController.swift */; };
 		1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C08D2858852D00C9587D /* TicketsViewController.swift */; };
 		1143C0B4285CE6C200C9587D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143C0B3285CE6C100C9587D /* SettingsViewController.swift */; };
 		1151D32F287ED45A008B89DD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151D32E287ED45A008B89DD /* HelpViewController.swift */; };
 		11934A28288FE9B7007FC06B /* TitledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11934A27288FE9B7007FC06B /* TitledTextFieldView.swift */; };
+		11B1E79A28AABE1900EE2E27 /* NumberOfPassengersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1E79928AABE1900EE2E27 /* NumberOfPassengersViewController.swift */; };
+		11B1E79C28AAF68000EE2E27 /* ListOfFlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1E79B28AAF68000EE2E27 /* ListOfFlightsViewController.swift */; };
+		11B1E79E28ABEDF000EE2E27 /* DateToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1E79D28ABEDF000EE2E27 /* DateToViewController.swift */; };
+		11B1E7A028ABEE0200EE2E27 /* DateReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1E79F28ABEE0200EE2E27 /* DateReturnViewController.swift */; };
 		11BD7442288476BD00FC40FC /* FromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD7441288476BD00FC40FC /* FromViewController.swift */; };
 		11BD744428847DA300FC40FC /* ToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD744328847DA300FC40FC /* ToViewController.swift */; };
 		11F52D142885D2D100425DE1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F52D132885D2D100425DE1 /* ResultsViewController.swift */; };
 		11F52D162885D94500425DE1 /* GooglePlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F52D152885D94500425DE1 /* GooglePlaceManager.swift */; };
-		260F9AB55CB605F91D322614 /* libPods-TMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF59869004B09432DD5FDB88 /* libPods-TMS.a */; };
+		1276525D2F662F5C4EEE5728 /* Pods_TMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25536BFB60536ADEF544DA7 /* Pods_TMS.framework */; };
+		CE12DD6A28AEC204006090E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12DD6928AEC204006090E4 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093A90B3955ECBE1140D2190 /* Pods-TMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.debug.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.debug.xcconfig"; sourceTree = "<group>"; };
+		110B687628D8AF5200591BFF /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		110B687828D8DB0A00591BFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		110B687D28D8DF0300591BFF /* CustomPassangersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassangersView.swift; sourceTree = "<group>"; };
+		110B687F28D8EF7900591BFF /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		110B688928D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoughtTicketsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		110B688B28D9C99A00591BFF /* AppDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataController.swift; sourceTree = "<group>"; };
+		110B688D28D9CE3D00591BFF /* FlightsDataBaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataBaseStorage.swift; sourceTree = "<group>"; };
+		110B688F28DA03F500591BFF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1143C0742857A31600C9587D /* TMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1143C0772857A31600C9587D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1143C0792857A31600C9587D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,18 +55,21 @@
 		1143C0802857A31B00C9587D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1143C0832857A31B00C9587D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1143C0852857A31B00C9587D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1143C08B285884C400C9587D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1143C08D2858852D00C9587D /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		1143C0B3285CE6C100C9587D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1151D32E287ED45A008B89DD /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		11934A27288FE9B7007FC06B /* TitledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledTextFieldView.swift; sourceTree = "<group>"; };
+		11B1E79928AABE1900EE2E27 /* NumberOfPassengersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPassengersViewController.swift; sourceTree = "<group>"; };
+		11B1E79B28AAF68000EE2E27 /* ListOfFlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFlightsViewController.swift; sourceTree = "<group>"; };
+		11B1E79D28ABEDF000EE2E27 /* DateToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToViewController.swift; sourceTree = "<group>"; };
+		11B1E79F28ABEE0200EE2E27 /* DateReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateReturnViewController.swift; sourceTree = "<group>"; };
 		11BD7441288476BD00FC40FC /* FromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromViewController.swift; sourceTree = "<group>"; };
 		11BD744328847DA300FC40FC /* ToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToViewController.swift; sourceTree = "<group>"; };
 		11F52D132885D2D100425DE1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		11F52D152885D94500425DE1 /* GooglePlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceManager.swift; sourceTree = "<group>"; };
-		207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.debug.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.debug.xcconfig"; sourceTree = "<group>"; };
-		B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.release.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.release.xcconfig"; sourceTree = "<group>"; };
-		FF59869004B09432DD5FDB88 /* libPods-TMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F19E6988C74E4CAD7897A9 /* Pods-TMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMS.release.xcconfig"; path = "Target Support Files/Pods-TMS/Pods-TMS.release.xcconfig"; sourceTree = "<group>"; };
+		A25536BFB60536ADEF544DA7 /* Pods_TMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE12DD6928AEC204006090E4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260F9AB55CB605F91D322614 /* libPods-TMS.a in Frameworks */,
+				1276525D2F662F5C4EEE5728 /* Pods_TMS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,10 +87,46 @@
 		0D98342369DE6417775D2DAC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */,
-				B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */,
+				093A90B3955ECBE1140D2190 /* Pods-TMS.debug.xcconfig */,
+				85F19E6988C74E4CAD7897A9 /* Pods-TMS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		110B687528D8AEFE00591BFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				110B687628D8AF5200591BFF /* TicketModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		110B687A28D8DB6600591BFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				110B687D28D8DF0300591BFF /* CustomPassangersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		110B688128D926A300591BFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				110B688F28DA03F500591BFF /* WebViewController.swift */,
+				11BD743E28846E9800FC40FC /* SearchTab */,
+				11BD744028846EC100FC40FC /* HelpTab */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		110B688428D9C0D700591BFF /* DataBaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				110B688828D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodeld */,
+				110B688B28D9C99A00591BFF /* AppDataController.swift */,
+				110B688D28D9CE3D00591BFF /* FlightsDataBaseStorage.swift */,
+			);
+			path = DataBaseStorage;
 			sourceTree = "<group>";
 		};
 		1143C06B2857A31600C9587D = {
@@ -75,7 +135,7 @@
 				1143C0762857A31600C9587D /* TMS */,
 				1143C0752857A31600C9587D /* Products */,
 				0D98342369DE6417775D2DAC /* Pods */,
-				272AC469740343CA02182182 /* Frameworks */,
+				CF23D169618554C5ECA5E09E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,9 +150,10 @@
 		1143C0762857A31600C9587D /* TMS */ = {
 			isa = PBXGroup;
 			children = (
-				11BD743E28846E9800FC40FC /* SearchTab */,
-				11BD743F28846EB100FC40FC /* TicketsTab */,
-				11BD744028846EC100FC40FC /* HelpTab */,
+				110B688428D9C0D700591BFF /* DataBaseStorage */,
+				110B687528D8AEFE00591BFF /* Models */,
+				110B687A28D8DB6600591BFF /* Views */,
+				110B688128D926A300591BFF /* Controllers */,
 				1143C0772857A31600C9587D /* AppDelegate.swift */,
 				1143C0792857A31600C9587D /* SceneDelegate.swift */,
 				1143C07B2857A31600C9587D /* ViewController.swift */,
@@ -107,8 +168,12 @@
 		11934A1C288EDC27007FC06B /* Searching */ = {
 			isa = PBXGroup;
 			children = (
-				1143C08B285884C400C9587D /* SearchViewController.swift */,
+				CE12DD6928AEC204006090E4 /* SearchViewController.swift */,
 				11934A27288FE9B7007FC06B /* TitledTextFieldView.swift */,
+				11B1E79928AABE1900EE2E27 /* NumberOfPassengersViewController.swift */,
+				11B1E79D28ABEDF000EE2E27 /* DateToViewController.swift */,
+				11B1E79F28ABEE0200EE2E27 /* DateReturnViewController.swift */,
+				110B687F28D8EF7900591BFF /* BookingViewController.swift */,
 			);
 			path = Searching;
 			sourceTree = "<group>";
@@ -121,6 +186,9 @@
 				11BD744328847DA300FC40FC /* ToViewController.swift */,
 				11F52D132885D2D100425DE1 /* ResultsViewController.swift */,
 				11F52D152885D94500425DE1 /* GooglePlaceManager.swift */,
+				11B1E79B28AAF68000EE2E27 /* ListOfFlightsViewController.swift */,
+				110B687828D8DB0A00591BFF /* DetailViewController.swift */,
+				11BD743F28846EB100FC40FC /* TicketsTab */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -142,10 +210,10 @@
 			path = HelpTab;
 			sourceTree = "<group>";
 		};
-		272AC469740343CA02182182 /* Frameworks */ = {
+		CF23D169618554C5ECA5E09E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF59869004B09432DD5FDB88 /* libPods-TMS.a */,
+				A25536BFB60536ADEF544DA7 /* Pods_TMS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,11 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1143C0882857A31B00C9587D /* Build configuration list for PBXNativeTarget "TMS" */;
 			buildPhases = (
-				0B4AAF69100D529F0E6E7C12 /* [CP] Check Pods Manifest.lock */,
+				8871B153CE89B52F5469D436 /* [CP] Check Pods Manifest.lock */,
 				1143C0702857A31600C9587D /* Sources */,
 				1143C0712857A31600C9587D /* Frameworks */,
 				1143C0722857A31600C9587D /* Resources */,
-				B39C9B528438CEC8950801EC /* [CP] Copy Pods Resources */,
+				F47299E436E4A6958596D2A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,7 +248,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					1143C0732857A31600C9587D = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -219,7 +287,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B4AAF69100D529F0E6E7C12 /* [CP] Check Pods Manifest.lock */ = {
+		8871B153CE89B52F5469D436 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,7 +309,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B39C9B528438CEC8950801EC /* [CP] Copy Pods Resources */ = {
+		F47299E436E4A6958596D2A9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,16 +335,28 @@
 			files = (
 				11934A28288FE9B7007FC06B /* TitledTextFieldView.swift in Sources */,
 				1143C07C2857A31600C9587D /* ViewController.swift in Sources */,
+				110B688E28D9CE3D00591BFF /* FlightsDataBaseStorage.swift in Sources */,
 				11F52D162885D94500425DE1 /* GooglePlaceManager.swift in Sources */,
+				CE12DD6A28AEC204006090E4 /* SearchViewController.swift in Sources */,
+				110B688C28D9C99A00591BFF /* AppDataController.swift in Sources */,
+				110B688A28D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodeld in Sources */,
+				110B689028DA03F500591BFF /* WebViewController.swift in Sources */,
 				1143C0B4285CE6C200C9587D /* SettingsViewController.swift in Sources */,
+				110B687E28D8DF0300591BFF /* CustomPassangersView.swift in Sources */,
 				1151D32F287ED45A008B89DD /* HelpViewController.swift in Sources */,
 				11F52D142885D2D100425DE1 /* ResultsViewController.swift in Sources */,
 				1143C08E2858852D00C9587D /* TicketsViewController.swift in Sources */,
 				11BD744428847DA300FC40FC /* ToViewController.swift in Sources */,
+				110B687928D8DB0A00591BFF /* DetailViewController.swift in Sources */,
+				11B1E7A028ABEE0200EE2E27 /* DateReturnViewController.swift in Sources */,
+				11B1E79E28ABEDF000EE2E27 /* DateToViewController.swift in Sources */,
 				1143C0782857A31600C9587D /* AppDelegate.swift in Sources */,
-				1143C08C285884C400C9587D /* SearchViewController.swift in Sources */,
 				11BD7442288476BD00FC40FC /* FromViewController.swift in Sources */,
+				11B1E79C28AAF68000EE2E27 /* ListOfFlightsViewController.swift in Sources */,
 				1143C07A2857A31600C9587D /* SceneDelegate.swift in Sources */,
+				110B687728D8AF5200591BFF /* TicketModel.swift in Sources */,
+				110B688028D8EF7900591BFF /* BookingViewController.swift in Sources */,
+				11B1E79A28AABE1900EE2E27 /* NumberOfPassengersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +498,7 @@
 		};
 		1143C0892857A31B00C9587D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 207E0E3D728C3F0E884C612C /* Pods-TMS.debug.xcconfig */;
+			baseConfigurationReference = 093A90B3955ECBE1140D2190 /* Pods-TMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,14 +510,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TMS.TMS2;
+				PRODUCT_BUNDLE_IDENTIFIER = TMS.TMS16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -447,7 +526,7 @@
 		};
 		1143C08A2857A31B00C9587D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B27BAB4A00EFFE0D16055E10 /* Pods-TMS.release.xcconfig */;
+			baseConfigurationReference = 85F19E6988C74E4CAD7897A9 /* Pods-TMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,14 +538,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TMS.TMS2;
+				PRODUCT_BUNDLE_IDENTIFIER = TMS.TMS16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -496,6 +574,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		110B688828D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				110B688928D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodel */,
+			);
+			currentVersion = 110B688928D9C85600591BFF /* BoughtTicketsDataModel.xcdatamodel */;
+			path = BoughtTicketsDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1143C06C2857A31600C9587D /* Project object */;
 }

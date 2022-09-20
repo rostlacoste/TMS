@@ -2,7 +2,7 @@
 
 import UIKit
 
-class TicketsViewController: UIViewController {
+final class TicketsViewController: UIViewController {
 
     
 
@@ -19,7 +19,7 @@ class TicketsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("ЗАБРОНИРУЙТЕ БИЛЕТЫ СЕЙЧАС!", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .systemGreen
+        button.backgroundColor = .systemBlue
         button.titleLabel!.font = UIFont(name: "Arial Bold", size: 18)
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 20
@@ -47,6 +47,9 @@ class TicketsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
        
         view.backgroundColor = .systemGray6
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -65,7 +68,7 @@ class TicketsViewController: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemGreen
+        appearance.backgroundColor = .systemBlue
         appearance.largeTitleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         appearance.titleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance;
@@ -116,6 +119,9 @@ class TicketsViewController: UIViewController {
     }
     
    
+    
+    
+    
     
     
     

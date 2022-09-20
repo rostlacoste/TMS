@@ -5,14 +5,14 @@ import UIKit
 let settingsViewController:SettingsViewController = SettingsViewController()
 
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     //MARK: - Variables
     
     private var cellsData: [SettingsTableCell] = [
-        .init(title: "Валюта", currencySwitch: nil),
-        .init(title: "Встроенные сообщения", currencySwitch: nil),
-        .init(title: "Настройки конфиденциальности", currencySwitch: nil),
+        
+        .init(title: "Получать предложения на почту", currencySwitch: nil),
+        
     ]
     
     //MARK: - Subviews
@@ -107,7 +107,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
        let messagesSwitch = UISwitch()
         messagesSwitch.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
-        messagesSwitch.isOn = true
+        messagesSwitch.isOn = false
         cell.accessoryView = messagesSwitch
         
         
@@ -118,10 +118,27 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
     @objc func didChangeSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            print("получать встроенные сообщения")
+            print("получать сообщения")
+
+            // Create new Alert
+            let dialogMessage = UIAlertController(title: "", message: "Теперь вы подписаны на самые горячие предложения", preferredStyle: .alert)
+             
+             // Create OK button with action handler
+             let ok = UIAlertAction(title: "Супер!", style: .default, handler: { (action) -> Void in
+                 print("Ok button tapped")
+              })
+             
+             //Add OK button to a dialog message
+             dialogMessage.addAction(ok)
+
+             // Present Alert to
+             self.present(dialogMessage, animated: true, completion: nil)
+            
+            
+            
         }
         else {
-            print("не получать встроенные сообщения")
+            print("не получать сообщения")
         }
     }
     

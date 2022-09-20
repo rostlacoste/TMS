@@ -6,6 +6,8 @@ import UIKit
 
 
 class TitledTextFieldView: UIView {
+    
+    var startTyping: (() -> Void)?
     var text: String? {
         get {
             textField.text
@@ -37,7 +39,6 @@ class TitledTextFieldView: UIView {
         let action = {
             self.titleLabel.textColor = .systemGray
             self.titleLabel.font = .systemFont(ofSize: 12)
-//            self.bottomLine.backgroundColor = .blue
             self.deactivateInactiveConstraint()
             self.activateActiveCostraints()
             self.layoutIfNeeded()
@@ -70,7 +71,7 @@ class TitledTextFieldView: UIView {
     
     public func updateText(text: String) {
         self.textField.text = text
-        self.titleLabel.font = .systemFont(ofSize: 20)
+        self.titleLabel.font = .systemFont(ofSize: 22)
         
         self.deactivateInactiveConstraint()
         self.activateActiveCostraints()
@@ -80,9 +81,8 @@ class TitledTextFieldView: UIView {
     func didBecomeInactive(animated: Bool = true) {
         let action = {
             self.titleLabel.textColor = .systemGray
-//            self.bottomLine.backgroundColor = .blue
             if (self.textField.text ?? "").isEmpty {
-                self.titleLabel.font = .systemFont(ofSize: 20)
+                self.titleLabel.font = .systemFont(ofSize: 22)
                 self.textField.font = .systemFont(ofSize: 22)
                 self.deactivateActiveConstaint()
                 self.activateInactiveConstraints()
@@ -126,8 +126,9 @@ class TitledTextFieldView: UIView {
         titleLabel.text = text
     }
     
-    init(title: String, initialValue: String? = "", frame: CGRect = .init()) {
+    init(title: String, initialValue: String? = "", frame: CGRect = .init(), startTyping: (() -> Void)? = nil) {
         super.init(frame: frame)
+        self.startTyping = startTyping
         text = initialValue
         titleLabel.text = title
         setup()
@@ -144,6 +145,7 @@ extension TitledTextFieldView: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        startTyping?()
         self.didBecomeActive()
     }
     

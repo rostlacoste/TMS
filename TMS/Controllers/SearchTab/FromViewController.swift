@@ -3,10 +3,10 @@ import UIKit
 import GooglePlaces
 import MapKit
 
-let toViewController: ToViewController = ToViewController()
+//let fromViewController: FromViewController = FromViewController()
 
 
-class ToViewController: UIViewController, UISearchResultsUpdating {
+final class FromViewController: UIViewController, UISearchResultsUpdating {
     
     
     
@@ -21,6 +21,8 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
     
     let appearance = UINavigationBarAppearance()
     
+    
+    
     private var placesClient: GMSPlacesClient!
     
     
@@ -28,12 +30,24 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
     
     
     
+    // MARK: - ЗАМЫКАНИЕ
+    var selectedCity: ((String) -> Void)?
+    
+    init(selectedCity: ((String) -> Void)?) {
+        
+        super.init(nibName: nil, bundle: nil)
+        self.selectedCity = selectedCity
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Life circle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(mapView)
+//        view.addSubview(mapView)
         
         
         
@@ -57,13 +71,14 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        self.tabBarController?.tabBar.layer.zPosition = -1
+        
         
         func hideTabBar() {
             var frame = self.tabBarController?.tabBar.frame
             frame!.origin.y = self.view.frame.size.height + (frame?.size.height)!
             UIView.animate(withDuration: 0.5, animations: {
                 self.tabBarController?.tabBar.frame = frame!
+                self.tabBarController?.tabBar.backgroundColor = .systemGray6
             })
         }
         hideTabBar()
@@ -95,12 +110,12 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
         
         view.backgroundColor = .systemGray6
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Куда"
+        navigationItem.title = "Откуда"
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemGreen
+        appearance.backgroundColor = .systemBlue
         appearance.largeTitleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         appearance.titleTextAttributes=[NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance;
@@ -111,14 +126,14 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
         searchVC.searchBar.searchBarStyle = .default
         searchVC.searchBar.tintColor = .white
         searchVC.searchBar.barTintColor = .white
-        searchVC.searchBar.backgroundColor = .systemGreen
-        searchVC.searchBar.placeholder = "Куда"
+        searchVC.searchBar.backgroundColor = .systemBlue
+        searchVC.searchBar.placeholder = "Откуда"
         searchVC.hidesNavigationBarDuringPresentation = false
         
         
         if let textfield = searchVC.searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = .white
-            textfield.tintColor = .systemGreen
+            textfield.tintColor = .systemBlue
         }
         
         
@@ -135,10 +150,13 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
         
     }
     
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
               let resultsVC = searchController.searchResultsController as? ResultsViewController
+                
         else {
             return
         }
@@ -151,6 +169,8 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
                 
                 DispatchQueue.main.async {
                     resultsVC.update(with: places)
+
+                    
                 }
                 
             case .failure(let error):
@@ -169,13 +189,17 @@ class ToViewController: UIViewController, UISearchResultsUpdating {
 //MARK: - extension
 
 
-extension ToViewController: ResultsViewControllerDelegate {
+extension FromViewController: ResultsViewControllerDelegate {
     
     
     func didTapPlace(with coordinates: CLLocationCoordinate2D) {
         
         searchVC.searchBar.resignFirstResponder()
         searchVC.dismiss(animated: true, completion: nil)
+        
+        
+//        let geocoder = GMSGeocoder()
+        
         
         let annotations = mapView.annotations
         mapView.removeAnnotations(annotations)
@@ -188,10 +212,12 @@ extension ToViewController: ResultsViewControllerDelegate {
                 latitudeDelta: 0.2,
                 longitudeDelta: 0.2)
         ),animated: true)
+        
+
+        
     }
     
 }
-
 
 
 
